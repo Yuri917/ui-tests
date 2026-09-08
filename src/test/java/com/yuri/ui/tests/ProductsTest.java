@@ -24,9 +24,9 @@ public class ProductsTest extends BaseTest {
     @Description("Проверка просмотра продукта")
     public void viewProductTest() {
         productsPage.viewProduct();
-//        $("[data-test='inventory-item-name']").shouldHave(text("Sauce Labs Fleece Jacket"));
+        $("[data-test='inventory-item-name']").shouldHave(text("Sauce Labs Fleece Jacket"));
         // Тестирование скриншотов
-        $("[data-test='inventory-item-name']").shouldHave(text("НЕВЕРНЫЙ ТОВАР"));
+//        $("[data-test='inventory-item-name']").shouldHave(text("НЕВЕРНЫЙ ТОВАР"));
         $("[data-test='add-to-cart']").shouldBe(visible);
         webdriver().shouldHave(urlContaining("/inventory-item.html?id=5"));
     }
